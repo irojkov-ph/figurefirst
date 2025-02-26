@@ -7,7 +7,7 @@ with open(os.path.join(here, "README.md")) as f:
     long_description = f.read()
 
 ext_dir_0 = os.path.join(here, "inkscape_extensions", "0.x")
-ext_dir_1 = os.path.join(here, "inkscape_extensions", "1.x")
+ext_dir_1 = os.path.join(here, "inkscape_extensions", "1.1+")
 
 ext_files_0 = [
     os.path.join("inkscape_extensions", "0.x", fname)
@@ -16,7 +16,7 @@ ext_files_0 = [
 ]
 
 ext_files_1 = [
-    os.path.join("inkscape_extensions", "1.x", fname)
+    os.path.join("inkscape_extensions", "1.1+", fname)
     for fname in os.listdir(ext_dir_1)
     if fname.endswith(".inx") or fname.endswith(".py")
 ]
