@@ -5,8 +5,6 @@ import copy
 import matplotlib.pyplot as plt
 import numpy as np
 
-import pkg_resources
-
 
 def get_empty_svg_document(tmp_filename=".fifi_tmp.svg"):
     """
