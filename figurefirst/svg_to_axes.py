@@ -1440,13 +1440,11 @@ class FigureLayout(object):
     def write_svg(self, output_filename):
         """ writes the current output_xml document to output_filename"""
         try:
-            outfile = open(output_filename, "w", encoding="utf-8")
-            self.output_xml.writexml(outfile, encoding="utf-8")
+            with open(output_filename, 'w') as outfile:
+                self.output_xml.writexml(outfile, encoding='utf-8')
         except UnicodeEncodeError:
-            outfile.close()
-            outfile = open(output_filename, "wb")
-            outfile.write(self.output_xml.toxml().encode("ascii", "xmlcharrefreplace"))
-            outfile.close()
+            with open(output_filename, 'wb') as outfile:
+                outfile.write(self.output_xml.toxml().encode('ascii', 'xmlcharrefreplace'))
 
     def save(self, filename, hidelayers=(), targetlayer=None, fix_meterlimt=True):
         """convenience function, inserts layers and then calls
