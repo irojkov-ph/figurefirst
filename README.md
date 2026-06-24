@@ -11,7 +11,7 @@ If you use FigureFirst, please cite the above paper to help others find FigureFi
 #### Install `figurefirst` using pip
 
 ```bash
-pip install figurefirst
+pip install git+https://github.com/irojkov-ph/figurefirst.git 
 ```
 #### Installing `figurefirst` inkscape extensions
 
